@@ -1,4 +1,4 @@
-%global commit main
+%global commit 
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name: basalt-monado
