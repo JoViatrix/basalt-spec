@@ -19,7 +19,7 @@ jobs:
         id: basalt
         run: |
           latest_commit=$(git ls-remote https://gitlab.freedesktop.org/mateosss/basalt.git HEAD | cut -f1)
-          echo "commit=$short_commit" >> "$GITHUB_OUTPUT"
+          echo "commit=$latest_commit" >> "$GITHUB_OUTPUT"
 
       - name: Update Version field in spec file
         run: |
