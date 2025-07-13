@@ -29,6 +29,7 @@ BuildRequires: fmt-devel
 BuildRequires: pkgconfig(eigen3)
 BuildRequires: libepoxy-devel
 BuildRequires: libxkbcommon-devel
+BuildRequires: suitesparse-devel
 
 
 %description
