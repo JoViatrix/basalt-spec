@@ -1,5 +1,5 @@
 Name: basalt-monado
-Version:8a45e15
+Version: 
 Release: %autorelease
 Summary: Basalt for Monado
 
