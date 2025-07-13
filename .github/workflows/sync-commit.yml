@@ -7,8 +7,6 @@ on:
 
 jobs:
   update-spec:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
 
     steps:
