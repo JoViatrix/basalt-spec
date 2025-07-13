@@ -5,6 +5,9 @@ on:
     - cron: '0 0 * * *'  # Every day at 0:00 UTC
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update-spec:
     runs-on: ubuntu-latest
@@ -17,11 +20,12 @@ jobs:
         id: basalt
         run: |
           latest_commit=$(git ls-remote https://gitlab.freedesktop.org/mateosss/basalt.git HEAD | cut -f1)
-          echo "commit=$latest_commit" >> "$GITHUB_OUTPUT"
+          short_commit=${latest_commit:0:7}
+          echo "commit=$short_commit" >> "$GITHUB_OUTPUT"
 
       - name: Update Version field in spec file
         run: |
-          sed -i 's|^%global commit .*|%global commit "${{ steps.get_commit.outputs.commit }}"|' *.spec
+          sed -i -E "s/^(Version:\s*).*/\1${{ steps.basalt.outputs.commit }}/" *.spec
           echo "Updated spec file:"
           grep Version: *.spec
 
