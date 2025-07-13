@@ -19,12 +19,11 @@ jobs:
         id: basalt
         run: |
           latest_commit=$(git ls-remote https://gitlab.freedesktop.org/mateosss/basalt.git HEAD | cut -f1)
-          short_commit=${latest_commit:0:7}
           echo "commit=$short_commit" >> "$GITHUB_OUTPUT"
 
       - name: Update Version field in spec file
         run: |
-          sed -i "s/^%global commit .*/%global commit ${{ steps.get_commit.outputs.commit }}/" *.spec
+          sed -i 's|^%global commit .*|%global commit "${{ steps.get_commit.outputs.commit }}"|' *.spec
           echo "Updated spec file:"
           grep Version: *.spec
 
