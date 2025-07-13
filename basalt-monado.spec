@@ -60,7 +60,6 @@ git submodule update --init --recursive
 
 %{_datarootdir}/basalt/*
 
-%{_prefix}/lib/debug/usr/lib/libbasalt.so.*
 %{_prefix}/lib/libbasalt.so*
 %{_prefix}/lib/pkgconfig/basalt.pc
 
