@@ -24,7 +24,7 @@ jobs:
 
       - name: Update Version field in spec file
         run: |
-          sed -i -E "s/^(Version:\s*).*/\1${{ steps.basalt.outputs.commit }}/" *.spec
+          sed -i "s/^%global commit .*/%global commit ${{ steps.get_commit.outputs.commit }}/" *.spec
           echo "Updated spec file:"
           grep Version: *.spec
 
