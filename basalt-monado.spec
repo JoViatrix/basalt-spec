@@ -1,14 +1,11 @@
-%global commit ""
-%global shortcommit %(c=%{commit}; echo ${c:0:7})
-
 Name: basalt-monado
-Version: %{shotcommit}
+Version:
 Release: %autorelease
 Summary: Basalt for Monado
 
 License: BSD-3-Clause
 URL: https://gitlab.freedesktop.org/mateosss/basalt
-Source0: https://gitlab.freedesktop.org/mateosss/basalt/-/archive/%{commit}/basalt-%{commit}.tar.gz
+Source0: https://gitlab.freedesktop.org/mateosss/basalt/-/archive/%{version}/basalt-%{version}.tar.gz
 
 BuildRequires: gcc-c++
 BuildRequires: cmake
@@ -38,7 +35,7 @@ BuildRequires: libxkbcommon-devel
 A fork of Basalt improved for tracking XR devices with Monado.
 
 %prep
-%autosetup -n %{name}-%{shortcommit}
+%autosetup -n %{name}-%{version}
 
 
 %build
