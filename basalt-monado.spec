@@ -2,7 +2,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name: basalt-monado
-Version: %{commit}
+Version: 8a45e15
 Release: %autorelease
 Summary: Basalt for Monado
 
