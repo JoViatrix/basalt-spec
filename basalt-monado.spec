@@ -1,9 +1,9 @@
-%global commit 4235555
-%global datetimever 202507181445%{commit}
+%global commit 8a45e15
+%global datetimever 2025071810218a45e15
 
 Name: basalt-monado
-Version: %{datetimever}
-Release: %autorelease.1
+Version: 2025071810218a45e15
+Release: 1%{?dist}
 Summary: Basalt for Monado
 
 License: BSD-3-Clause
@@ -69,6 +69,9 @@ git submodule update --init --recursive
 
 
 %changelog
+* Fri Jul 18 2025 GitHub Actions <actions@github.com> - 2025071810218a45e15-1
+- Auto-update to Basalt commit 8a45e15
+
 
 %autochangelog
 
