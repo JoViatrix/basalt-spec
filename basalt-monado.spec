@@ -69,5 +69,6 @@ git submodule update --init --recursive
 
 
 %changelog
+
 %autochangelog
 
