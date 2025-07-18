@@ -1,6 +1,9 @@
+%global commit 4235555
+%global datetimever 202507181445%{commit}
+
 Name: basalt-monado
-Version: 8a45e15
-Release: %autorelease
+Version: %{datetimever}
+Release: %autorelease.1
 Summary: Basalt for Monado
 
 License: BSD-3-Clause
@@ -37,14 +40,14 @@ A fork of Basalt improved for tracking XR devices with Monado.
 
 
 %prep
-git clone --recurse-submodules https://gitlab.freedesktop.org/mateosss/basalt.git %{name}-%{version}
-cd %{name}-%{version}
-git checkout %{version}
+git clone --recurse-submodules https://gitlab.freedesktop.org/mateosss/basalt.git %{name}-%{commit}
+cd %{name}-%{commit}
+git checkout %{commit}
 git submodule update --init --recursive
 
 
 %build
-%cmake --preset library %{name}-%{version}
+%cmake --preset library %{name}-%{commit}
 %cmake_build
 
 
