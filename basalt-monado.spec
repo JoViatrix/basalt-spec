@@ -64,11 +64,14 @@ git submodule update --init --recursive
 
 %{_datarootdir}/basalt/*
 
-%{_prefix}/lib/libbasalt.so*
-%{_prefix}/lib/pkgconfig/basalt.pc
+%{_libdir}/libbasalt.so*
+%{_libdir}/pkgconfig/basalt.pc
 
 
 %changelog
+* Tue Oct 5 2025 Manual Actions
+- update lib paths
+
 * Tue Sep 30 2025 GitHub Actions <actions@github.com> - 2025093001505337898-1
 - Auto-update to Basalt commit 5337898
 
