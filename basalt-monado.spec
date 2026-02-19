@@ -1,8 +1,8 @@
-%global commit d0953ee
-%global datetimever 202602060242d0953ee
+%global commit 90cdaec
+%global datetimever 20260219024790cdaec
 
 Name: basalt-monado
-Version: 202602060242d0953ee
+Version: 20260219024790cdaec
 Release: 1%{?dist}
 Summary: Basalt for Monado
 
@@ -69,6 +69,9 @@ git submodule update --init --recursive
 
 
 %changelog
+* Thu Feb 19 2026 GitHub Actions <actions@github.com> - 20260219024790cdaec-1
+- Auto-update to Basalt commit 90cdaec
+
 * Fri Feb 06 2026 GitHub Actions <actions@github.com> - 202602060242d0953ee-1
 - Auto-update to Basalt commit d0953ee
 
